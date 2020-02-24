@@ -54,7 +54,7 @@
 <script lang="ts">
 // import Vue from 'vue';
 // import HelloWorld from './components/HelloWorld.vue';
-import { createComponent, reactive, computed, watch, onMounted, onUnmounted } from "@vue/composition-api";
+import { defineComponent, reactive, computed, watch, onMounted, onUnmounted } from "@vue/composition-api";
 
 interface Todo {
   id: number;
@@ -109,7 +109,7 @@ interface OriginType {
   visibility: Visibility;
   newTodo: string;
 }
-export default createComponent({
+export default defineComponent({
   setup() {
     // 基础状态 => data
     const origin: OriginType = {
